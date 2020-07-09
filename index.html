@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/slide1.jpeg">
+    <title>RefreshAuto Care</title>
+
+    
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="./jquery/dist/jquery.min.js"></script>
+<script src="./popper/dist/popper.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <style>
+        .aboutus img
+        {
+            
+            height:250px;
+            width:250px;
+        }
+
+        
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+#testimonial
+{
+    background-image: url('images/gradient2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+    </style>
+    
+    
+</head>
+<body>
+    <!--------navbar------->
+    <div class="container-fluid shadow bg-danger text-white py-2 text-center font-weight-bold">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 col-lg-4"> 
+      <i class="fa fa-phone mr-2"></i>
+      +91-9673514527
+      +91-9372729495
+    </div>
+    
+    <div class="col-md-4 col-sm-12 col-lg-4">
+      <i class="fa fa-envelope mr-2"></i>
+      info@example.com
+    </div>
+    
+    <div class="col-md-4 col-sm-12 col-lg-4">
+     Follow Us:
+     <a href="#" class="fa fa-facebook"></a>
+     <a href="#" class="fa fa-twitter"></a>
+     <a href="#" class="fa fa-instagram"></a> 
+     
+    </div>
+  </div>
+</div>
+
+<nav class=" sticky-top navbar navbar-expand-lg navbar-light  bg-light">
+  <a class="navbar-brand" href="index.php"><b class="text-danger animate-text">Refresh</b><b class="animate-text">Auto Care</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ml-auto ">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Home</a>
+      </li>
+      
+      <li class="nav-item ">
+        <a class="nav-link " href="#aboutus">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#service">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#work">Work Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#testimonial">Testimonial</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contactus">Contact Us</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.animate-text');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.animate-text .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.animate-text',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+ SourceT
+</script>
+<!-----------------navbar closed---------------------->
+
+<!---------------------carousel-------------->
+  
+<div class="container mt-5">
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/slider1.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Giving Your Car the Care it Truly Deserves</h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="images/slider2.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="images/slider3.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+<!---------------carousel closed------>
+
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='fa fa-arrow-circle-up'></i></button>
+
+
+    <div class="jumbotron text-center wow fadeInLeft">
+        <h2 class=""> hii Welcome to AutoRefresh </h2>
+        We Provide You Excellent Service to our customer
+    </div>
+
+
+    <h2 id="aboutus" class="text-center pt-5 animate__animated animate__fadeInDown">About  Us</h2>
+    <div class="center-line m-auto"></div>
+    <br>
+    
+    <div class="container aboutus">
+        <div class="jumbotron">    
+
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12">
+                <center>
+                <div class="card animate__animated animate__fadeInLeft" style="width:400px">
+                    <img class="img-fluid card-img-top rounded-circle  img-thumbnail aboutusimg" src="images/ankush.jpg" alt="Card image" height="300px" width="300px">
+                    <div class="card-body">
+                    <h4 class="card-title">Ankush Hipparkar</h4>
+                    <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                    </div>
+                </div>
+                </center>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12">
+                <center>    
+                <div class="card animate__animated animate__fadeInRight" style="width:400px">
+                    <img class="img-fluid card-img-top rounded-circle img-fluid img-thumbnail" src="images/ankush.jpg" alt="Card image" height="300px" width="300px">
+                    <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                    </div>
+                </div>
+                </center>
+            </div>
+
+        </div>
+        <br>
+            <br><p> <b> We Refresh Auto Care at Tathawade pride ourselves in offering our customers with standardised services at a competitive price. Our young, energetic and genius team's sole purpose is to achieve highest level of customer satisfaction by making an easy and quality experience. Our services are not limited,as we also provide other services like car washing, wheel balancing and many more to fulfil our clients requirement.
+            </b></p>
+        </div>
+    </div>
+
+
+
+    <!---------------service------------------------>
+    <section id="service" class=" pb-5">
+        <h2 class="text-center pt-5 animate__animated animate__fadeInDown">Services</h2>
+        <div class="center-line m-auto"></div>
+        <br>            
+        <div class="container-fluid service">
+    <center>
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/car_cleaning.jpeg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Car Cleaning & Grooming</h4>
+                    <p class="card-text">Our Skilled workers provide excellent and efficient Car Cleaning and Grooming Services for different Cars.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/car_coating.jpeg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Car Coating Services For Underbody</h4>
+                    <p class="card-text">Assisted by rich experience and technical knowledge, we are able to offer car coating services for underbody.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/car_denting.jpeg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Car Denting Services</h4>
+                    <p class="card-text">Don't brood over your car's dent. Bring it to us and we will repair the dent in no time.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/car_detailing.jpeg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Car Detailing Services</h4>
+                    <p class="card-text">With our expertise in this domain, we are engaged in providing best car detailing services..</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/car_glass_polishing.jpeg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Car Glass Polishing Services</h4>
+                    <p class="card-text">Consult and avail the best service who are experts in providing car glass polishing services..</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/car_repair.jpeg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Car Repair & Maintenance</h4>
+                    <p class="card-text">We fulfill all required needs of customers. We have dynamic professionals for repairing cars at market price..</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/Exterior_Interior_Cleaning.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Exterior & Interior Cleaning</h4>
+                    <p class="card-text">The ultimate interior and exterior service for your car. Our most popular service..</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/service_clean.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Seat & Carpet Shampoo</h4>
+                    <p class="card-text">The ultimate interior service for your car. Leave your seats/mats spotless and looking new.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/seat_carpet.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Fine Detailing</h4>
+                    <p class="card-text">Pamper your car with the thorough detail it deserves. We offer a wide range of services..</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="images/paintless_dent.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Paintless Dent Removal</h4>
+                    <p class="card-text">Remove small dents from your vehicle without having to use paint, bondo or fillers on the vehicle.</p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+    </div>
+    </center>
+</div>
+</section>
+
+
+
+<!------------------------------------work gallery----------------------->
+    <section id="work" class="bg-light pb-5">
+        <h2 class="text-center pt-5 animate__animated animate__fadeInDown">Work</h2>
+        <div class="center-line m-auto"></div>
+        <br>            
+        <div class="container-fluid">
+  <center>
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-lg-4 mt-5">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="images/gallary_image1.jpg" alt="Card image">
+          
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-lg-4 mt-5">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="images/gallary_image2.jpg" alt="Card image">
+          
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-lg-4 mt-5">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="images/gallary_image3.jpg" alt="Card image">
+          
+        </div>
+    </div>
+  </div>
+  
+
+  <div class="row mt-5">
+    <div class="col-md-4 col-sm-4 col-lg-4 mt-5">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="images/gallary_image4.jpg" alt="Card image">
+          
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-lg-4 mt-5">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="images/gallary_image5.jpeg" alt="Card image">
+          
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-lg-4 mt-5">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="images/gallary_image6.jpeg" alt="Card image">
+          
+        </div>
+    </div>
+    
+  </div>
+  </center>
+</div>
+    </section>
+
+
+
+<!----------------testimonial------------------------------------->
+
+
+    <section id="testimonial" class="text-white pb-5">
+        <h2 class="text-center pt-5 animate__animated animate__fadeInDown">Testimonial</h2>
+        <div class="center-line m-auto"></div>
+        <br>            
+        
+        <div class="container testimonal">
+        <div id="demo1" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo1" data-slide-to="0" class="active"></li>
+            <li data-target="#demo1" data-slide-to="1"></li>
+            <li data-target="#demo1" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <center>
+                <div class="card" style="width:400px">
+                <center>
+                    <img class="card-img-top" src="images/owner1.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Car Cleaning & Grooming</h4>
+                        <p class="card-text">Our Skilled workers provide excellent and efficient Car Cleaning and Grooming Services for different Cars.</p>
+                    </div>
+                </center>    
+                </div>
+                </center> 
+            </div>
+
+            <div class="carousel-item ">
+                <center>
+                <div class="card" style="width:400px">
+                <center>
+                    <img class="card-img-top" src="images/owner1.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Car Cleaning & Grooming</h4>
+                        <p class="card-text">Our Skilled workers provide excellent and efficient Car Cleaning and Grooming Services for different Cars.</p>
+                    </div>
+                </center>    
+                </div>
+                </center> 
+            </div>
+            
+            <div class="carousel-item ">
+                <center>
+                <div class="card" style="width:400px">
+                <center>
+                    <img class="card-img-top" src="images/owner1.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Car Cleaning & Grooming</h4>
+                        <p class="card-text">Our Skilled workers provide excellent and efficient Car Cleaning and Grooming Services for different Cars.</p>
+                    </div>
+                </center>    
+                </div>
+                </center> 
+            </div>
+            
+        </div>
+        <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo1" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+        </div>
+        </div>
+    </section>
+    
+
+
+<!----------------contactus---------------->
+    <section id="contactus" class="jumbotron">
+        <h2 class="text-center pt-5 animate__animated animate__fadeInDown">Contact Us</h2>
+        <div class="center-line m-auto"></div>
+        <br>
+        <br>
+        <div class="container bg-dark formbox  text-white pb-5">        
+            <br><br><h2 class="text-center">Contact Form</h2>
+            <form action="mailer.php" method="POST">
+                <div class="form-group">
+                        <label for="email">Name:*</label>
+                        <input type="text" class="form-control" id="nm" placeholder="Enter Name" name="nm" required autocomplete="off">
+                        <span id="username"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:*</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required autocomplete="off">
+                    <span id="mail"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone No:*</label>
+                    <input type="number" class="form-control" id="phone" placeholder="Phone Number" name="phone" required autocomplete="off">
+                </div>
+        
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>    		
+                </div>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+    
+
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 text-white bg-danger pb-3 contactbox mt-5">
+                    <center><h3>Workshop Address</h3></center>
+                    
+                    <text>Sr.125,Opposite to JSPM College,Pune Mumbai(Bypass) Highway, Tathawade, Pune, Maharashtra 411033 </text>
+                </div>
+                
+                <div class="col-sm-12 col-md-4 mt-5  text-white bg-danger contactbox">
+                    <center><h3>Social Media</h3>
+                    
+                    <a href="https://www.facebook.com/wakode.builders"><i class="fa fa-facebook"></i></a><br>
+                    </center>
+                </div>
+                <div class="col-sm-12 col-md-4 text-white bg-danger contactbox mt-5">
+                    <center><h3>Our Timings</h3>
+                    <i class="fa fa-clock"></i>
+                    <text> Mon - Sun : Open 24 hrs</text>
+                    </center>
+                </div>
+                
+            </div>
+        </div>    
+        
+        <div class="mt-5">
+            <center><h3>Map</h3></center>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.988927761883!2d73.7447883143701!3d18.619567770999932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ba29e81ebd73%3A0x4e8a6e91a6953209!2sService%20Rd%2C%20Ashok%20Nagar%2C%20Tathawade%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411033!5e0!3m2!1sen!2sin!4v1594291261128!5m2!1sen!2sin" width="100%" height="300px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+    </section>
+
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+
+    
+</script>
+
+<div class="footer">
+    &copy; Copyrights 2020 - 2021.Refresh Auto Care.All Rights Reserved.
+    Design by ASD Creation
+</div>    
+</body>
+</html>
+
